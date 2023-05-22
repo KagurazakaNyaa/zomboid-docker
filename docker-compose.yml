@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  dedicated-server:
+    image: kagurazakanyaa/zomboid:latest
+    build:
+      context: .
+    restart: unless-stopped
+    network_mode: bridge
+    ports:
+      - 16261:16261/udp
+      - 16262:16262/udp
+    environment:
+      - SERVER_NAME=test
+      - FORCE_UPDATE=false
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ./data:/data
