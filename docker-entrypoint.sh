@@ -5,7 +5,7 @@ if [[ -n $FORCE_UPDATE ]] && [[ $FORCE_UPDATE == "true" ]];then
 fi
 
 if [ $# -eq 0 ];then
-    /opt/pzserver/start-server.sh -cachedir=/data -servername "$SERVER_NAME"
+    /opt/pzserver/start-server.sh -cachedir=/data -servername "$SERVER_NAME" -adminusername "$ADMIN_USERNAME" -adminpassword "$ADMIN_PASSWORD"
 else
     exec "$@"
 fi

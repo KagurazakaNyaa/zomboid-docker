@@ -8,6 +8,8 @@ RUN steamcmd +force_install_dir "/opt/pzserver" +login anonymous +app_update 380
 
 ENV SERVER_NAME=servertest
 ENV FORCE_UPDATE=false
+ENV ADMIN_USERNAME=admin
+ENV ADMIN_PASSWORD=changeme
 
 ADD docker-entrypoint.sh /docker-entrypoint.sh
 
