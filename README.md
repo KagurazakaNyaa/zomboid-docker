@@ -23,3 +23,7 @@ Zomboid dedicated server with docker
 | Path    | Describe               |
 |---------|------------------------|
 | `/data` | Game config and saves. |
+
+NOTE: If you use bind instead of volume to mount, you need to manually change the volume owner to uid=1000.
+In the case of the docker-compose.yml of the example, you need to execute `chown -R 1000:1000 ./data`
+Please make sure the permissions and owners of the pak file you placed in the mods directory are correct.

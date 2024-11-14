@@ -1,4 +1,4 @@
-FROM cm2network/steamcmd:root
+FROM cm2network/steamcmd:steam
 
 ARG DEBIAN_FRONTEND=noninteractive
 
@@ -10,7 +10,7 @@ RUN /home/steam/steamcmd/steamcmd.sh \
     +app_update 380870 validate \
     +quit
 
-ENV SERVER_NAME=servertest
+ENV SERVER_NAME=test
 ENV FORCE_UPDATE=false
 ENV ADMIN_USERNAME=admin
 ENV ADMIN_PASSWORD=changeme
