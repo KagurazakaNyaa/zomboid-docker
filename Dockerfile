@@ -4,6 +4,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /opt/pzserver
 
+RUN /home/steam/steamcmd/steamcmd.sh +login anonymous +quit
 RUN /home/steam/steamcmd/steamcmd.sh \
     +force_install_dir "/opt/pzserver" \
     +login anonymous \
